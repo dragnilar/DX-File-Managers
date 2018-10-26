@@ -9,10 +9,11 @@ namespace FileManager_WindowsForms.Models
 {
     public abstract class AbstractFile
     {
-        protected int Id { get; set; }
-        protected string FileName { get; set; }
-        protected string FileType { get; set; }
-        protected string FilePath { get; set; }
+        //Reminder - you cannot make these public, otherwise the DXGrid will not be able to see them :P
+        public int Id { get; set; }
+        public string FileName { get; set; }
+        public string FileType { get; set; }
+        public string FilePath { get; set; }
 
 
         public bool ExportFile(string selectedDirectory, string customSuffix = "", int numberOfCopies = 1)

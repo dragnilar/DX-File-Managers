@@ -41,7 +41,8 @@ namespace FileManager_WindowsForms.Views
             fluent.SetBinding(spinEditNumberOfFiles, x => x.EditValue, vm => vm.NumberOfSelectedFiles);
             fluent.SetBinding(textEditFileSuffix, x => x.EditValue, vm => vm.CustomFileSuffix);
             fluent.BindCommand(simpleButtonSaveSelectedFile, x=>x.BrowseForExportPath());
-            
+           
+
             fluent.WithEvent<DevExpress.XtraGrid.Views.Base.ColumnView,
                     DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs>(
                     gridViewFileList, "FocusedRowObjectChanged").SetBinding(x => x.SelectedEntity,
